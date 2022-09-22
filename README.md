@@ -2,11 +2,11 @@
 
 js是一门单线程的脚本语言，js的任务分为同步任务和异步任务，同步任务进入主线程（主执行栈）执行，异步任务进入任务队列（先进先出)，主线程任务执行完，会去任务队列中读取对应任务，推入主线程执行，这个过程不断重复，构成事件循环（Event Loop）
 
-![image](/image/image.png)
+![](image/image.png)
 
 异步任务分为宏任务与微任务，在事件循环会进行多轮，在事件循环中，每进行一次循环操作称为tick，每一次 tick 的任务键的步骤可以总结如下：1.执行一个宏任务（栈中没有就从事件队列中获取）；2.执行过程中如果遇到微任务，就将它添加到微任务的任务队列中；3.宏任务执行完毕后，立即执行当前微任务队列中的所有微任务（依次执行）；4.当前宏任务执行完毕，开始检查渲染，然后GUI线程接管渲染；5.渲染完毕后，JS线程继续接管，开始下一个宏任务（从事件队列中获取）
 
-![image1](/image/image1.png)
+![](image/image1.png)
 
 宏任务主要包含：script( 整体代码)、setTimeout、setInterval、I/O、UI 交互事件、setImmediate(Node.js 环境)，ajax
 微任务主要包含：Promise、MutaionObserver、process.nextTick(Node.js 环境) 
@@ -106,7 +106,7 @@ c.inc();  //控制台输出2
 
 ### 4.**怎样改变this 指向，不同点在哪里**
 
-![image2](/image/image2.png)
+![image2](image/image2.png)
 
 ### 5.**typescript数据类型**
 
@@ -162,7 +162,7 @@ c.inc();  //控制台输出2
 
 生命周期基础
 
-![image3](/image/image3.png)
+![image3](image/image3.png)
 
 vue3也提供了两种不同的生命周期表现形式1.Composition API（组件式api）形式的生命周期钩子，与vue2.x中钩子对应关系如下,
 
